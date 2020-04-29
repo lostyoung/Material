@@ -129,9 +129,10 @@ open class NavigationBar: UINavigationBar, Themeable {
     //iterate through the subviews to set `layoutMargins` to zero
     for v in subviews {
       if #available(iOS 13.0, *) {
-        let margins = v.layoutMargins
-        v.frame.origin.x = -margins.left
-        v.frame.size.width += margins.left + margins.right
+        //此处代码会导致页面切换过程中导航栏跳动问题
+        //let margins = v.layoutMargins
+        //v.frame.origin.x = -margins.left
+        //v.frame.size.width += margins.left + margins.right
       } else {
         v.layoutMargins = .zero
       }
