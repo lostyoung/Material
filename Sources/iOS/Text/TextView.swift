@@ -323,7 +323,7 @@ open class TextView: UITextView, Themeable {
   }
   
   /// Minimum TextView text height.
-  internal let minimumTextHeight: CGFloat = 32
+  internal let minimumTextHeight: CGFloat = 16
   
   open override var intrinsicContentSize: CGSize {
     guard isGrowEnabled else {
